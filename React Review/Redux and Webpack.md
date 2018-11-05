@@ -134,3 +134,8 @@ const rootReducer = combineReducers({ searchRobots, requestRobots})
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware))
 
+
+##REDUX PROJECT STRUCTURES
+As apps grow, the folder structure will become significantly more important. Having one Container component will not be realistic; with Redux, we can use Connect to pick and choose which containers can connect to the Store.
+
+As we grow, it'll begin to make sense having more than one actions file, more than one constants file, and more than one reducers file. You could create folders by those types, or you could create folders to contain each specific feature.
