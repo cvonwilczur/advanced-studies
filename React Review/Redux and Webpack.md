@@ -112,3 +112,25 @@ mapStateToProps - what state connect is listening to
 mapDispatchToProps - what action to listen to
 
 Connect will listen to the state for certain actions and give the values to the Apps as props.
+
+
+
+###REDUX MIDDLEWARE
+Middleware like React Logger will sit between the action and the reducer, allowing us to log actions as they occur and how they change the state.
+
+Redux DevTools, another tool, is a Chrome plugin that offers a similar benefit.
+
+
+###REDUX ASYNC ACTIONS
+Redux Thunk is another middleware that handles async actions.  It uses this through dispatch, where you will need a reducer and actions to handle pending, success and failure.
+
+Redux Thunk waits to see if any action returns a function instead of an object. If it picks up a function, it acts upon it.
+
+###ROOT REDUCER
+
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+
+const rootReducer = combineReducers({ searchRobots, requestRobots})
+
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
+
