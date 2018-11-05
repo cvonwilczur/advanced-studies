@@ -132,5 +132,5 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 
 const rootReducer = combineReducers({ searchRobots, requestRobots})
 
-const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware))
 
